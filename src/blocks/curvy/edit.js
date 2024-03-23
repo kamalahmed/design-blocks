@@ -37,7 +37,7 @@ export default function Edit(props) {
 	return (
 		<>
 		<section className={`alignfull ${className}`} { ...otherProps }>
-			<Curve />
+			{enableTopCurve && <Curve/>}
 		</section>
 		
 
