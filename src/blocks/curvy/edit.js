@@ -11,7 +11,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, ToggleControl } from '@wordpress/components'
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -20,7 +21,7 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
-
+import Curve from './components/Curve';
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
@@ -29,10 +30,36 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit(props) {
+	const { attributes, setAttributes } = props;
+	const { enableTopCurve } = attributes;
+	const {className, ...otherProps} = useBlockProps();
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Curvy Blocks – hello from the editor!', 'design-blocks' ) }
-		</p>
+		<>
+		<section className={`alignfull ${className}`} { ...otherProps }>
+			<Curve />
+		</section>
+		
+
+
+		{/* Controls starts */}
+		<InspectorControls>
+			<PanelBody title={ __( 'Top Curve', 'design-blocks' ) }>
+				<ToggleControl
+                    label={ __( 'Enable Top Curve', 'design-blocks' ) }
+                    checked={ enableTopCurve }
+                    onChange={ ( isChecked ) => {
+                        setAttributes( {
+                            enableTopCurve: isChecked,
+                        } );
+                    } }
+                />
+
+			</PanelBody>
+		</InspectorControls>
+
+		</>
+		
+
 	);
 }
