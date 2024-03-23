@@ -1,16 +1,17 @@
 <?php
 /**
  * Plugin Name:       Design Blocks
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       Transform your WordPress site with DesignBlocks: A dynamic, user-friendly block editor plugin that unlocks limitless design possibilities. Elevate your web presence effortlessly.
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0
- * Author:            The WordPress Contributors
+ * Author:            Kamal Ahmed
+ * Author URI:        https://github.com/kamalahmed
+ * Plugin URI:        https://github.com/kamalahmed/design-blocks
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       design-blocks
  *
- * @package           create-block
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
