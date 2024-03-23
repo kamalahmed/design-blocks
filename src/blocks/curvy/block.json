@@ -1,12 +1,12 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "design-blocks/design-blocks",
+	"name": "design-blocks/curvy",
 	"version": "0.1.0",
-	"title": "Curvy",
+	"title": "Curvy - Shape Divider",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "This is a shape divider block",
+	"description": "This is a shape divider block. You can use it to separate two sections.",
 	"example": {},
 	"supports": {
 		"html": false

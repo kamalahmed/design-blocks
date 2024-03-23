@@ -246,7 +246,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"design-blocks/design-blocks","version":"0.1.0","title":"Curvy","category":"widgets","icon":"smiley","description":"This is a shape divider block","example":{},"supports":{"html":false},"textdomain":"design-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"design-blocks/curvy","version":"0.1.0","title":"Curvy - Shape Divider","category":"widgets","icon":"smiley","description":"This is a shape divider block. You can use it to separate two sections.","example":{},"supports":{"html":false},"textdomain":"design-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
