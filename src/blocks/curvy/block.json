@@ -9,9 +9,34 @@
 	"description": "This is a shape divider block. You can use it to separate two sections.",
 	"example": {},
 	"supports": {
-		"html": false
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true,
+			"link": true
+		},
+		"spacing": {
+			"padding":true
+		}
 	},
 	"attributes": {
+		"style": {
+			"type": "object",
+            "default": {
+				"color": {
+					"background": "#ec4899",
+                    "text": "#000000"
+                },
+				"spacing": {
+					"padding": {
+                        "top": "80px",
+                        "right": "50px",
+                        "bottom": "80px",
+                        "left": "50px"
+                    }
+				}
+			}
+        },
 		"enableTopCurve": {
 			"type": "boolean",
             "default": true
