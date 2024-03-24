@@ -12,8 +12,8 @@
     "html": false,
     "color": {
       "background": true,
-      "text": true,
-      "link": true
+      "text": false,
+      "link": false
     },
     "spacing": {
       "padding": true
@@ -24,8 +24,7 @@
       "type": "object",
       "default": {
         "color": {
-          "background": "#ec4899",
-          "text": "#000000"
+          "background": "#B1C5A4"
         },
         "spacing": {
           "padding": {
@@ -48,6 +47,14 @@
     "topHeight": {
       "type": "number",
       "default": 0
+    },
+    "topFlipX": {
+      "type": "boolean",
+      "default": false
+    },
+    "topFlipY": {
+      "type": "boolean",
+      "default": false
     }
   },
   "textdomain": "design-blocks",

@@ -37,7 +37,8 @@ import Curve from "./components/Curve";
  */
 export default function Edit(props) {
 	const { attributes, setAttributes } = props;
-	const { enableTopCurve, topWidth, topHeight } = attributes;
+	const { enableTopCurve, topWidth, topHeight, topFlipX, topFlipY } =
+		attributes;
 	const { className, ...otherProps } = useBlockProps();
 	return (
 		<>
@@ -79,6 +80,26 @@ export default function Edit(props) {
 								onChange={(value) => {
 									setAttributes({
 										topHeight: parseInt(value, 10),
+									});
+								}}
+							/>
+							<HorizontalRule />
+							<ToggleControl
+								label={__("Flip Horizontally", "design-blocks")}
+								checked={topFlipX}
+								onChange={(isChecked) => {
+									setAttributes({
+										topFlipX: isChecked,
+									});
+								}}
+							/>
+
+							<ToggleControl
+								label={__("Flip Vertically", "design-blocks")}
+								checked={topFlipY}
+								onChange={(isChecked) => {
+									setAttributes({
+										topFlipY: isChecked,
 									});
 								}}
 							/>

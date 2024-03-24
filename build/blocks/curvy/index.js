@@ -111,7 +111,9 @@ function Edit(props) {
   const {
     enableTopCurve,
     topWidth,
-    topHeight
+    topHeight,
+    topFlipX,
+    topFlipY
   } = attributes;
   const {
     className,
@@ -151,6 +153,22 @@ function Edit(props) {
     onChange: value => {
       setAttributes({
         topHeight: parseInt(value, 10)
+      });
+    }
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.HorizontalRule, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Flip Horizontally", "design-blocks"),
+    checked: topFlipX,
+    onChange: isChecked => {
+      setAttributes({
+        topFlipX: isChecked
+      });
+    }
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Flip Vertically", "design-blocks"),
+    checked: topFlipY,
+    onChange: isChecked => {
+      setAttributes({
+        topFlipY: isChecked
       });
     }
   })))));
@@ -358,7 +376,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"design-blocks/curvy","version":"0.1.0","title":"Curvy - Shape Divider","category":"widgets","icon":"smiley","description":"This is a shape divider block. You can use it to separate two sections.","example":{},"supports":{"html":false,"color":{"background":true,"text":true,"link":true},"spacing":{"padding":true}},"attributes":{"style":{"type":"object","default":{"color":{"background":"#ec4899","text":"#000000"},"spacing":{"padding":{"top":"80px","right":"50px","bottom":"80px","left":"50px"}}}},"enableTopCurve":{"type":"boolean","default":true},"topWidth":{"type":"number","default":100},"topHeight":{"type":"number","default":0}},"textdomain":"design-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"design-blocks/curvy","version":"0.1.0","title":"Curvy - Shape Divider","category":"widgets","icon":"smiley","description":"This is a shape divider block. You can use it to separate two sections.","example":{},"supports":{"html":false,"color":{"background":true,"text":false,"link":false},"spacing":{"padding":true}},"attributes":{"style":{"type":"object","default":{"color":{"background":"#B1C5A4"},"spacing":{"padding":{"top":"80px","right":"50px","bottom":"80px","left":"50px"}}}},"enableTopCurve":{"type":"boolean","default":true},"topWidth":{"type":"number","default":100},"topHeight":{"type":"number","default":0},"topFlipX":{"type":"boolean","default":false},"topFlipY":{"type":"boolean","default":false}},"textdomain":"design-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
