@@ -43,7 +43,14 @@ export default function Edit(props) {
 	return (
 		<>
 			<section className={`alignfull ${className}`} {...otherProps}>
-				{enableTopCurve && <Curve height={topHeight} width={topWidth} />}
+				{enableTopCurve && (
+					<Curve
+						height={topHeight}
+						width={topWidth}
+						flipx={topFlipX}
+						flipy={topFlipY}
+					/>
+				)}
 			</section>
 
 			{/* Controls starts */}

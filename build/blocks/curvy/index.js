@@ -18,8 +18,12 @@ __webpack_require__.r(__webpack_exports__);
 const Curve = props => {
   const {
     height,
-    width
+    width,
+    flipx,
+    flipy
   } = props;
+  const normalPath = "M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z";
+  const invertedPath = "M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z";
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     style: {
       position: "absolute",
@@ -27,7 +31,8 @@ const Curve = props => {
       left: "0",
       width: "100%",
       height: height,
-      overflow: "hidden"
+      overflow: "hidden",
+      transform: `scaleX(${flipx ? -1 : 1}) rotate(${flipy ? "180deg" : 0}) `
     }
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
     preserveAspectRatio: "none",
@@ -38,12 +43,12 @@ const Curve = props => {
       width: `${width}%`,
       height: height
     },
-    viewBox: "0 0 1200 200"
+    viewBox: "0 0 1200 120"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
     style: {
       fill: "#fff"
     },
-    d: "M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+    d: flipy ? invertedPath : normalPath
   })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Curve);
@@ -124,7 +129,9 @@ function Edit(props) {
     ...otherProps
   }, enableTopCurve && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_Curve__WEBPACK_IMPORTED_MODULE_5__["default"], {
     height: topHeight,
-    width: topWidth
+    width: topWidth,
+    flipx: topFlipX,
+    flipy: topFlipY
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Top Curve", "design-blocks")
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
